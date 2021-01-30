@@ -1,5 +1,4 @@
 /* Global styles  */
-
 *{
     margin: 0;
     padding: 0;
@@ -46,10 +45,18 @@ button{
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
+
+    /* create the transition from the original color to the second one. Is possible to add the kind of transitione (google it easing to find different ones) and the duration*/
+    transition: background ease-in-out 0.5s; 
+}
+
+/* animate the button, change the color when you are on it  */
+
+button:hover{
+    background: #27394e;
 }
 
 /* Nav section with Hero  */
-
 .main-head{
     background: #131c27;
     color: white;
@@ -101,12 +108,62 @@ nav ul{
 
 
 /* Locations section */
-
 #locations{
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./imagines_icons/img/new-york-page.png");
     background-size: cover;
-    background-position: center;    
+    background-position: center;  
+    display: flex;
+    align-items: center; 
+    
+    /* this is because of the clouds, otherwise are located on the top of the main page and not the location page and overflow is to don't show the image in the other page when it move up*/
+    position: relative;
+    overflow: hidden;
+}
+
+/* to align the text with the logo in the first page */
+.locations-head{
+    width: 90%;
+    margin: auto;
+}
+
+/* put some space in the text. the 0 it means i have 0 padding to left and right*/
+.locations-head h2{
+    padding: 1rem 0rem;
+}
+
+.locations-head h3{
+    padding: 4rem 0rem;
+}
+
+/* make the clouds animation  */
+.cloud{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.moving-cloud-1{
+    animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2{
+    top: 20%;
+    /* to put it behid, try without the z-index and you can understand why  */
+    z-index: -1;
+    opacity: 0.5;
+    animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+/* the real cloud animation, how will change from ... to... or I can also use %*/
+@keyframes cloudAnimation{
+    from{
+        transform: translate(10%, -10%);
+    }
+
+    to{
+        transform: translate(0%, 0%);
+    }
 }
 
 /* add the parameteres to be responsive */
@@ -119,5 +176,21 @@ nav ul{
     }
     #logo{
         padding:2rem;
+    }
+    .cloud{
+        height: 40rem;
+        /* to be able to select the text*/
+        pointer-events: none;
+    }
+    .moving-cloud-1{
+        z-index: -1;
+    }
+    .moving-cloud-2{
+        z-index: -2;
+    }
+    /* is to have that kind of square background because otherwise is difficult to read the text */
+    .locations-head h3{
+        background: rgba(19, 28, 39, 0.8);
+        color: white;
     }
 }
