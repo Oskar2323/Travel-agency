@@ -60,6 +60,11 @@ button:hover{
 .main-head{
     background: #131c27;
     color: white;
+    /* to have the menu bar in each page  */
+    position: sticky;
+    top: 0px;
+    /* the z-index is because without the bar is behind the coulds and the other images*/
+    z-index: 3;
 }
 
 nav{
