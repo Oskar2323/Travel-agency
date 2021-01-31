@@ -220,6 +220,10 @@ nav ul{
     background:#4c6e97;
 }
 
+button:focus{
+    background: #2c3f57;
+    outline-style: solid;
+}
 /* Start to make the Contact part */
 #contact{
     min-height: 100vh;

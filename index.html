@@ -31,75 +31,78 @@ however it's not going to work if you just open up the index.html on it's own. S
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Travel Beyond Limits</h2>
-        <h3>Start your travell at an affordable price with Borealis<br>Contact us now bellow.</h3>
-        <button>Book now</button>
+    <main>
+        <section class="hero">
+            <h2>Travel Beyond Limits</h2>
+            <h3>Start your travell at an affordable price with Borealis<br>Contact us now bellow.</h3>
+            <button>Book now</button>
+        </section>
+    <!-- start to the benefits part -->
+    
+    <section id="locations">
+        <header class="locations-head">
+            <h2>The Perfect Travelling Experience.</h2>
+            <h3>Specialized in Aurora Borealis discovey but not only, with us <br> you can have an amazing travelling experience around the world</h3>
+    
+            <!-- start to make the cloud animation  -->
+            <img src="./imagines_icons/img/cloud.png" class="moving-cloud-1 cloud" >
+            <img src="./imagines_icons/img/cloud.png" class="moving-cloud-2 cloud" >
+        </header>
     </section>
-<!-- start to the benefits part -->
-
-<section id="locations">
-    <header class="locations-head">
-        <h2>The Perfect Travelling Experience.</h2>
-        <h3>Specialized in Aurora Borealis discovey but not only, with us <br> you can have an amazing travelling experience around the world</h3>
-
-        <!-- start to make the cloud animation  -->
-        <img src="./imagines_icons/img/cloud.png" class="moving-cloud-1 cloud" >
-        <img src="./imagines_icons/img/cloud.png" class="moving-cloud-2 cloud" >
-    </header>
-</section>
-
-<!-- Benefits section -->
-<section id="benefits">
-    <header class="benefits-header">
-        <h2>The Perfect Travel.</h2>
-        <h3>We organizze everything from picking the perfect hoter <br> to flight and other services</h3>
-    </header>
-    <div class="cards">
-        <div class="card">
-            <!-- I wrap the image into a div because in this way I can change the background color to obtain that nice thick strip along the entire box and not only the icon. Try without and see the difference -->
-            <div class="card-icon">
-                <img src="./imagines_icons/icons/route-solid.svg" alt="">
+    
+    <!-- Benefits section -->
+    <section id="benefits">
+        <header class="benefits-header">
+            <h2>The Perfect Travel.</h2>
+            <h3>We organizze everything from picking the perfect hoter <br> to flight and other services</h3>
+        </header>
+        <div class="cards">
+            <div class="card">
+                <!-- I wrap the image into a div because in this way I can change the background color to obtain that nice thick strip along the entire box and not only the icon. Try without and see the difference -->
+                <div class="card-icon">
+                    <img src="./imagines_icons/icons/route-solid.svg" alt="">
+                </div>
+                <h4>Travel</h4>
+                <p>Travel in over 250 countries with no effort.</p>
             </div>
-            <h4>Travel</h4>
-            <p>Travel in over 250 countries with no effort.</p>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="./imagines_icons/icons/bed-solid.svg" alt="">
+                </div>
+                <h4>Hotel</h4>
+                <p>Hotels located near popular areas.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="./imagines_icons/icons/plane-departure-solid.svg" alt="">
+                </div>
+                <h4>Fly</h4>
+                <p>The best flights at the best price</p>
+            </div>
         </div>
-        <div class="card">
-            <div class="card-icon">
-                <img src="./imagines_icons/icons/bed-solid.svg" alt="">
-            </div>
-            <h4>Hotel</h4>
-            <p>Hotels located near popular areas.</p>
-        </div>
-        <div class="card">
-            <div class="card-icon">
-                <img src="./imagines_icons/icons/plane-departure-solid.svg" alt="">
-            </div>
-            <h4>Fly</h4>
-            <p>The best flights at the best price</p>
-        </div>
-    </div>
-
-<!-- Make the section part -->
-</section>
-<section id="contact">
-   <div class="form-wrapper">
-       <header class="form-head">
-           <h2>Contact Us</h2>
-       </header>
-       <form>
-           <div class="name-form">
-               <label for="name">Name:</label>
-               <input type="text", name="name" required>
-            </div>
-            <div class="email-form">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" required>
-            </div>
-            <button type="submit">Submit</button>
-       </form>
-   </div>
-</section>
+    
+    <!-- Make the section part -->
+    </section>
+    <section id="contact">
+       <div class="form-wrapper">
+           <header class="form-head">
+               <h2>Contact Us</h2>
+           </header>
+           <form>
+               <div class="name-form">
+                   <label for="name">Name:</label>
+                   <input id='name' type="text", name="name" required>
+                </div>
+                <div class="email-form">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+                <button type="submit">Submit</button>
+           </form>
+       </div>
+    </section>
+    </main>
+   
 
 <!-- add the footer -->
 <footer>
@@ -107,9 +110,10 @@ however it's not going to work if you just open up the index.html on it's own. S
         <!-- the strange symbol is to make the copyright sympol -->
         <h5>Borealis &copy;</h5>
         <ul>
-            <li><a href="#"><img src="./imagines_icons/icons/twitter.svg" alt=""></a></li>
-            <li><a href="#"><img src="./imagines_icons/icons/youtube.svg" alt=""></a></li>
-            <li><a href="#"><img src="./imagines_icons/icons/instagram.svg" alt=""></a></li>
+            <!-- in the alt label inside the image is good to write a kind of label to know what it is if the image somehow doesn't load -->
+            <li><a href="#" title= "twitter-social-media"><img src="./imagines_icons/icons/twitter.svg" alt="twitter-social-media"></a></li>
+            <li><a href="#" title= "youtube-social-media"><img src="./imagines_icons/icons/youtube.svg" alt="youtube-social-media"></a></li>
+            <li><a href="#" title= "instagram-social-media"><img src="./imagines_icons/icons/instagram.svg" alt="instagram-social-media"></a></li>
         </ul>
     </div>
 </footer>
